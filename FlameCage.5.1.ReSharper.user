@@ -1,0 +1,112 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="30A49881-2388-41BF-8ED0-D2D2CB1F84FD/d:Views/f:RoomListView.xaml" caret="823" fromTop="3" />
+      <File id="30A49881-2388-41BF-8ED0-D2D2CB1F84FD/f:packages.config" caret="0" fromTop="0" />
+      <File id="30A49881-2388-41BF-8ED0-D2D2CB1F84FD/d:Core/f:ShadowedWindow.cs" caret="1840" fromTop="5" />
+      <File id="30A49881-2388-41BF-8ED0-D2D2CB1F84FD/f:MetroMessageBox.xaml" caret="1375" fromTop="6" />
+      <File id="30A49881-2388-41BF-8ED0-D2D2CB1F84FD/d:Properties/f:app.manifest" caret="467" fromTop="5" />
+      <File id="30A49881-2388-41BF-8ED0-D2D2CB1F84FD/f:MainWindow.xaml" caret="5032" fromTop="15" />
+      <File id="30A49881-2388-41BF-8ED0-D2D2CB1F84FD/d:ViewModels/f:MainViewModel.cs" caret="1431" fromTop="27" />
+      <File id="30A49881-2388-41BF-8ED0-D2D2CB1F84FD/f:FlashWindow.cs" caret="4413" fromTop="35" />
+      <File id="30A49881-2388-41BF-8ED0-D2D2CB1F84FD/f:MainWindow.xaml.cs" caret="153" fromTop="5" />
+      <File id="30A49881-2388-41BF-8ED0-D2D2CB1F84FD/f:Startup.cs" caret="951" fromTop="30" />
+      <File id="30A49881-2388-41BF-8ED0-D2D2CB1F84FD/d:ViewModels/f:RoomListViewModel.cs" caret="1351" fromTop="9" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="30A49881-2388-41BF-8ED0-D2D2CB1F84FD/d:Views/f:RoomListView.xaml" caret="795" fromTop="2" />
+      <File id="30A49881-2388-41BF-8ED0-D2D2CB1F84FD/f:MainWindow.xaml.cs" caret="757" fromTop="11" />
+      <File id="30A49881-2388-41BF-8ED0-D2D2CB1F84FD/f:MetroMessageBox.xaml" caret="1500" fromTop="6" />
+      <File id="30A49881-2388-41BF-8ED0-D2D2CB1F84FD/f:MainWindow.xaml" caret="428" fromTop="4" />
+      <File id="30A49881-2388-41BF-8ED0-D2D2CB1F84FD/f:MainWindow.xaml" caret="1931" fromTop="2" />
+      <File id="30A49881-2388-41BF-8ED0-D2D2CB1F84FD/f:MainWindow.xaml" caret="1769" fromTop="18" />
+      <File id="30A49881-2388-41BF-8ED0-D2D2CB1F84FD/f:MainWindow.xaml" caret="2905" fromTop="16" />
+      <File id="30A49881-2388-41BF-8ED0-D2D2CB1F84FD/f:MainWindow.xaml.cs" caret="2370" fromTop="45" />
+      <File id="30A49881-2388-41BF-8ED0-D2D2CB1F84FD/f:MainWindow.xaml.cs" caret="999" fromTop="11" />
+      <File id="30A49881-2388-41BF-8ED0-D2D2CB1F84FD/f:MainWindow.xaml.cs" caret="1614" fromTop="29" />
+      <File id="30A49881-2388-41BF-8ED0-D2D2CB1F84FD/f:MainWindow.xaml" caret="2605" fromTop="8" />
+      <File id="30A49881-2388-41BF-8ED0-D2D2CB1F84FD/f:MainWindow.xaml" caret="3252" fromTop="23" />
+      <File id="30A49881-2388-41BF-8ED0-D2D2CB1F84FD/f:MainWindow.xaml.cs" caret="2536" fromTop="29" />
+      <File id="30A49881-2388-41BF-8ED0-D2D2CB1F84FD/f:MainWindow.xaml.cs" caret="1188" fromTop="0" />
+      <File id="30A49881-2388-41BF-8ED0-D2D2CB1F84FD/f:FlashWindow.cs" caret="97" fromTop="7" />
+      <File id="30A49881-2388-41BF-8ED0-D2D2CB1F84FD/f:FlashWindow.cs" caret="5238" fromTop="40" />
+      <File id="30A49881-2388-41BF-8ED0-D2D2CB1F84FD/f:FlashWindow.cs" caret="13" fromTop="0" />
+      <File id="30A49881-2388-41BF-8ED0-D2D2CB1F84FD/f:FlashWindow.cs" caret="3898" fromTop="22" />
+      <File id="30A49881-2388-41BF-8ED0-D2D2CB1F84FD/f:FlashWindow.cs" caret="4415" fromTop="36" />
+      <File id="30A49881-2388-41BF-8ED0-D2D2CB1F84FD/f:FlashWindow.cs" caret="4939" fromTop="50" />
+      <File id="30A49881-2388-41BF-8ED0-D2D2CB1F84FD/f:MainWindow.xaml.cs" caret="1744" fromTop="34" />
+      <File id="30A49881-2388-41BF-8ED0-D2D2CB1F84FD/f:MainWindow.xaml.cs" caret="153" fromTop="5" />
+      <File id="30A49881-2388-41BF-8ED0-D2D2CB1F84FD/f:Startup.cs" caret="1578" fromTop="14" />
+      <File id="30A49881-2388-41BF-8ED0-D2D2CB1F84FD/f:Startup.cs" caret="910" fromTop="20" />
+      <File id="30A49881-2388-41BF-8ED0-D2D2CB1F84FD/d:ViewModels/f:RoomListViewModel.cs" caret="3176" fromTop="19" />
+    </RecentEdits>
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False">
+    </NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="NotifyIcon" priority="2" />
+      <Item value="null" priority="0" />
+      <Item value="new" priority="0" />
+      <Item value="ObjectFactory`0" priority="0" />
+      <Item value="IAddSiteView`0" priority="0" />
+      <Item value="Content" priority="0" />
+      <Item value="Notify`0" priority="0" />
+      <Item value="LoadNormalView`0" priority="0" />
+      <Item value="SetWindow`0" priority="0" />
+      <Item value="MainViewModel`0" priority="0" />
+      <Item value="DataContext" priority="0" />
+      <Item value="Normal" priority="0" />
+      <Item value="Visibility" priority="2" />
+      <Item value="Visibility`0" priority="0" />
+      <Item value="message" priority="0" />
+      <Item value="SelectedRoom" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Hardcodet.Wpf.TaskbarNotification.TaskbarIcon">
+      <Item value="ShowBalloonTip`0" priority="0" />
+      <Item value="ShowCustomBalloon`0" priority="0" />
+      <Item value="TrayMouseDoubleClick" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Hardcodet.Wpf.TaskbarNotification.BalloonIcon">
+      <Item value="Error" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Controls.Primitives.PopupAnimation">
+      <Item value="Slide" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@StructureMap.ObjectFactory">
+      <Item value="GetInstance`1" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:GrayHills.FlameCage.Client.MainWindow">
+      <Item value="Activate`0" priority="0" />
+      <Item value="RestoreButton" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:GrayHills.FlameCage.Client.ViewModels.MainViewModel">
+      <Item value="CurrentWindowState" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Visibility">
+      <Item value="Hidden" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Visibility">
+      <Item value="Visible" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:GrayHills.FlameCage.Client.Messages.RoomSelectedMessage">
+      <Item value="Room" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+</Configuration>

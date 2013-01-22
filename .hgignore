@@ -1,0 +1,7 @@
+glob:*.g.i.*
+glob:*/bin/*
+glob:*/obj/*
+glob:*.suo
+glob:*ReSharper*
+glob:*/Debug/*
+glob:*/publish/*

@@ -1,0 +1,4 @@
+<Modules>
+  <Module PersistentId="30A49881-2388-41BF-8ED0-D2D2CB1F84FD" ModuleId="GrayHills.FlameCage.Client" />
+  <Module PersistentId="Hardcodet.Wpf.TaskbarNotification, Version=1.0.4.0, Culture=neutral" ModuleId="Hardcodet.Wpf.TaskbarNotification" />
+</Modules>

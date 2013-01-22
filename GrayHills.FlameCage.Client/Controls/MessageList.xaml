@@ -1,0 +1,232 @@
+﻿<UserControl x:Class="GrayHills.FlameCage.Client.Controls.MessageList"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:core="clr-namespace:GrayHills.FlameCage.Client.Core"
+             xmlns:controls="clr-namespace:GrayHills.FlameCage.Client.Controls">
+  <UserControl.Resources>
+    <ResourceDictionary>
+      <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/Resources/General.xaml" />
+        <ResourceDictionary>
+          <DataTemplate x:Key="TimestampMessageDataTemplate">
+            <Border HorizontalAlignment="Left"
+                    CornerRadius="3"
+                    Margin="10, 2"
+                    Padding="4, 1"
+                    Background="LightGray"
+                    VerticalAlignment="Bottom">
+              <TextBlock Text="{Binding Value, Mode=OneTime}"
+                         Foreground="Black"
+                         FontSize="9" />
+            </Border>
+          </DataTemplate>
+          <DataTemplate x:Key="KickMessageDataTemplate">
+            <TextBlock HorizontalAlignment="Center"
+                       FontWeight="Bold"
+                       Padding="2, 4, 2, 4">
+              <TextBlock Text="{Binding User.Name}" />
+              <TextBlock Text=" has been kicked from the room." />
+            </TextBlock>
+          </DataTemplate>
+          <DataTemplate x:Key="AdvertisementMessageDataTemplate">
+            <Border BorderThickness="0, 2, 0, 2"
+                    BorderBrush="Black">
+              <TextBlock core:NavigationService.Text="{Binding Content}"
+                         TextWrapping="WrapWithOverflow"
+                         HorizontalAlignment="Stretch" />
+            </Border>
+          </DataTemplate>
+          <DataTemplate x:Key="TextMessageDataTemplate">
+            <TextBlock core:NavigationService.Text="{Binding Text}"
+                       Background="{StaticResource TopBarActiveBrush}"
+                       Foreground="White"
+                       TextWrapping="WrapWithOverflow"
+                       Margin="4, 2"
+                       FontFamily="./resources/fonts/#Segoe WP"
+                       FontSize="14" />
+          </DataTemplate>
+          <DataTemplate x:Key="MyTextMessageDataTemplate">
+            <TextBlock core:NavigationService.Text="{Binding Text}"
+                       HorizontalAlignment="Right"
+                       TextAlignment="Right"
+                       Background="{StaticResource TopBarActiveBrush}"
+                       Foreground="White"
+                       TextWrapping="WrapWithOverflow"
+                       Margin="4, 2"
+                       FontFamily="./resources/fonts/#Segoe WP"
+                       FontSize="14" />
+          </DataTemplate>
+          <DataTemplate x:Key="EnterMessageDataTemplate">
+            <TextBlock HorizontalAlignment="Center"
+                       FontWeight="Bold"
+                       Padding="2, 4, 2, 4">
+              <TextBlock Text="{Binding User.Name}" />
+              <TextBlock Text=" has entered the room." />
+            </TextBlock>
+          </DataTemplate>
+          <DataTemplate x:Key="PasteMessageDataTemplate">
+            <StackPanel Orientation="Vertical"
+                        Margin="2, 4, 2, 4"
+                        Background="Yellow">
+              <TextBlock Text="{Binding User.Name}"
+                         FontWeight="Bold" />
+              <TextBlock Text="{Binding Text}"
+                         TextWrapping="WrapWithOverflow"
+                         FontFamily="./resources/fonts/#Segoe WP" />
+            </StackPanel>
+          </DataTemplate>
+          <DataTemplate x:Key="LeaveMessageDataTemplate">
+            <TextBlock HorizontalAlignment="Center"
+                       FontWeight="Bold"
+                       Padding="2, 4, 2, 4">
+              <TextBlock Text="{Binding User.Name}" />
+              <TextBlock Text=" has left the room." />
+            </TextBlock>
+          </DataTemplate>
+          <DataTemplate x:Key="SoundMessageDataTemplate">
+            <TextBlock Background="Orange"
+                       Foreground="Black"
+                       FontWeight="Bold"
+                       Padding="2, 4, 2, 4">
+              <TextBlock Text="{Binding User.Name}" />
+              <TextBlock Text=" has played a sound." />
+            </TextBlock>
+          </DataTemplate>
+          <DataTemplate x:Key="UnknownMessageDataTemplate">
+            <StackPanel Orientation="Vertical"
+                        Margin="2, 4, 2, 4">
+              <!--<TextBlock Text="{Binding User.Name}" />-->
+              <TextBlock Text="{Binding Message}"
+                         TextWrapping="WrapWithOverflow" />
+            </StackPanel>
+          </DataTemplate>
+          <DataTemplate x:Key="ImageUploadDataTemplate">
+            <controls:ImageUploadMessageControl DataContext="{Binding}" />
+          </DataTemplate>
+          <DataTemplate x:Key="TopicChangedDataTemplate">
+            <Border CornerRadius="5"
+                    Margin="5"
+                    Padding="5"
+                    Background="Orange">
+              <WrapPanel Orientation="Horizontal">
+                <TextBlock Text="{Binding User.Name}"
+                           FontWeight="Bold"
+                           FontFamily="Segoe UI" />
+                <TextBlock Text=" has changed the topic to "
+                           FontFamily="Segoe UI" />
+                <TextBlock Text="{Binding NewTopic}"
+                           TextWrapping="Wrap"
+                           FontFamily="Segoe UI" />
+              </WrapPanel>
+            </Border>
+          </DataTemplate>
+          <DataTemplate x:Key="LockedDataTemplate">
+            <Border CornerRadius="5"
+                    Margin="5"
+                    Padding="5"
+                    Background="Red">
+              <WrapPanel Orientation="Horizontal">
+                <TextBlock Text="{Binding User.Name}"
+                           FontWeight="Bold"
+                           FontFamily="Segoe UI" />
+                <TextBlock Text=" has locked the room."
+                           FontFamily="Segoe UI" />
+              </WrapPanel>
+            </Border>
+          </DataTemplate>
+          <core:MessageViewModelTemplateSelector x:Key="MessageGroupMessageViewModelDataTemplateSelector"
+                                                 TextMessageDataTemplate="{StaticResource TextMessageDataTemplate}"
+                                                 PasteMessageDataTemplate="{StaticResource PasteMessageDataTemplate}"
+                                                 ImageUploadDataTemplate="{StaticResource ImageUploadDataTemplate}" />
+          <core:MessageViewModelTemplateSelector x:Key="MyMessageGroupMessageViewModelDataTemplateSelector"
+                                                 TextMessageDataTemplate="{StaticResource MyTextMessageDataTemplate}"
+                                                 PasteMessageDataTemplate="{StaticResource PasteMessageDataTemplate}"
+                                                 ImageUploadDataTemplate="{StaticResource ImageUploadDataTemplate}" />
+
+          <DataTemplate x:Key="MyMessageGroupDataTemplate">
+            <StackPanel HorizontalAlignment="Right"
+                        Margin="32, 4, 4, 0"
+                        Orientation="Vertical">
+              <Border AllowDrop="True"
+                      Grid.Row="1"
+                      Grid.RowSpan="2"
+                      BorderThickness="1"
+                      BorderBrush="{StaticResource TopBarActiveBrush}"
+                      Background="{StaticResource TopBarActiveBrush}"
+                      Padding="4">
+                <ItemsControl x:Name="MessagesListView"
+                              BorderThickness="0"
+                              HorizontalContentAlignment="Right"
+                              ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                              ItemsSource="{Binding Messages}"
+                              ItemTemplateSelector="{StaticResource MyMessageGroupMessageViewModelDataTemplateSelector}" />
+              </Border>
+              <StackPanel Orientation="Horizontal"
+                          HorizontalAlignment="Right"
+                          Margin="0, 0, 15, 0">
+                <TextBlock Text="{Binding User.Name}"
+                           Margin="50, 2, 2, 2" />
+                <Polygon Points="0,0 10,0 10,17 0,0"
+                         Stroke="{StaticResource TopBarActiveBrush}"
+                         Fill="{StaticResource TopBarActiveBrush}"
+                         StrokeThickness="2" />
+              </StackPanel>
+            </StackPanel>
+          </DataTemplate>
+          <DataTemplate x:Key="OtherMessageGroupDataTemplate">
+            <StackPanel Margin="4, 4, 32, 0"
+                        HorizontalAlignment="Left"
+                        Orientation="Vertical">
+              <Border AllowDrop="True"
+                      Grid.Row="1"
+                      Grid.RowSpan="2"
+                      BorderThickness="1"
+                      BorderBrush="{StaticResource TopBarActiveBrush}"
+                      Background="{StaticResource TopBarActiveBrush}"
+                      Padding="4">
+                <ItemsControl x:Name="MessagesListView"
+                              BorderThickness="0"
+                              HorizontalContentAlignment="Left"
+                              ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                              ItemsSource="{Binding Messages}"
+                              ItemTemplateSelector="{StaticResource MessageGroupMessageViewModelDataTemplateSelector}" />
+              </Border>
+              <StackPanel Orientation="Horizontal"
+                          HorizontalAlignment="Left"
+                          Margin="15, 0, 0, 0">
+                <Polygon Points="0,0 0,17 10,0 0,0"
+                         Stroke="{StaticResource TopBarActiveBrush}"
+                         Fill="{StaticResource TopBarActiveBrush}"
+                         StrokeThickness="2" />
+                <TextBlock Margin="2, 2, 50, 2"
+                           Text="{Binding User.Name}" />
+              </StackPanel>
+            </StackPanel>
+          </DataTemplate>
+          <core:MessageViewModelTemplateSelector x:Key="MessageViewModelDataTemplateSelector"
+                                                 TextMessageDataTemplate="{StaticResource TextMessageDataTemplate}"
+                                                 EnterMessageDataTemplate="{StaticResource EnterMessageDataTemplate}"
+                                                 UnknownMessageDataTemplate="{StaticResource UnknownMessageDataTemplate}"
+                                                 PasteMessageDataTemplate="{StaticResource PasteMessageDataTemplate}"
+                                                 AdvertisementMessageDataTemplate="{StaticResource AdvertisementMessageDataTemplate}"
+                                                 KickMessageDataTemplate="{StaticResource KickMessageDataTemplate}"
+                                                 TimestampMessageDataTemplate="{StaticResource TimestampMessageDataTemplate}"
+                                                 LeaveMessageDataTemplate="{StaticResource LeaveMessageDataTemplate}"
+                                                 MyMessageGroupDataTemplate="{StaticResource MyMessageGroupDataTemplate}"
+                                                 TopicChangedDataTemplate="{StaticResource TopicChangedDataTemplate}"
+                                                 ImageUploadDataTemplate="{StaticResource ImageUploadDataTemplate}"
+                                                 LockedDataTemplate="{StaticResource LockedDataTemplate}"
+                                                 OtherMessageGroupDataTemplate="{StaticResource OtherMessageGroupDataTemplate}" />
+        </ResourceDictionary>
+      </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+  </UserControl.Resources>
+  <ScrollViewer x:Name="MessagesScrollView"
+                HorizontalScrollBarVisibility="Disabled">
+    <ItemsControl x:Name="MessagesListView"
+                  BorderThickness="0"
+                  ItemsSource="{Binding}"
+                  ItemTemplateSelector="{StaticResource MessageViewModelDataTemplateSelector}" />
+  </ScrollViewer>
+</UserControl>
+  

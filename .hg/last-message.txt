@@ -1,0 +1,1 @@
+Added an installer and a notify icon.
